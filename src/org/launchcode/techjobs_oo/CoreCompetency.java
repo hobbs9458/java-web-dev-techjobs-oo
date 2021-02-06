@@ -7,6 +7,8 @@ public class CoreCompetency {
     private static int nextId = 1;
     private String value;
 
+    //constructors
+
     public CoreCompetency() {
         this.id = nextId;
         nextId++;
@@ -14,6 +16,22 @@ public class CoreCompetency {
 
     public CoreCompetency(String value) {
         this();
+        this.value = value;
+    }
+
+    //getters
+
+    public String getValue() {
+        return value;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    //setters
+
+    public void setValue(String value) {
         this.value = value;
     }
 

@@ -2,8 +2,12 @@ package org.launchcode.techjobs_oo;
 
 public class Job {
 
+    //each job has its own id.
+    // do other classes in the Job's fields contain their own unique ids?
     private int id;
     private static int nextId = 1;
+
+
 
     private String name;
     private Employer employer;
@@ -20,4 +24,5 @@ public class Job {
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
+
 }

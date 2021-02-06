@@ -3,6 +3,7 @@ package org.launchcode.techjobs_oo;
 import java.util.Objects;
 
 public class Employer {
+    //each employer seems to have its own value and id
     private int id;
     private static int nextId = 1;
     private String value;
@@ -12,6 +13,9 @@ public class Employer {
         nextId++;
     }
 
+    //this(); is calling the employer class;
+    // this allows multiple ways to create an employer;
+    // with a value, or just with an id
     public Employer(String value) {
         this();
         this.value = value;
@@ -32,6 +36,7 @@ public class Employer {
         return getId() == employer.getId();
     }
 
+    //this is calling a function named "hash" that you haven't created yet
     @Override
     public int hashCode() {
         return Objects.hash(getId());
