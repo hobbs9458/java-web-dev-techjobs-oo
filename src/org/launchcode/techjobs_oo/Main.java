@@ -17,4 +17,10 @@ public class Main {
 //        }
 //    }
 
+
+  public static void main(String[] args) {
+    Job jobNoArgs = new Job();
+    System.out.println(jobNoArgs.getId());
+    System.out.println(jobNoArgs.getName());
+  }
 }
