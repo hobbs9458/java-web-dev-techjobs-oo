@@ -54,26 +54,37 @@ public class Job {
         return Objects.hash(id);
     }
 
-//    @Override
-//    public String toString() {
-//        if(this.getName() == null) {
-//            this.setName("Data not available");
-//        }
-//        if(this.getEmployer().getValue() == null) {
-//            this.employer.setValue("Data not available");
-//        }
-//        if(this.ge)
-//
-//        else {
-//            return "\n"
-//                + "ID: " + this.getId() + "\n"
-//                + "Name: " + this.getName() + "\n"
-//                + "Employer: " + this.getEmployer().getValue() + "\n"
-//                + "Location: " + this.getLocation().getValue() +  "\n"
-//                + "Position Type: " + this.getPositionType().getValue() + "\n"
-//                + "Core Competency: " + this.getCoreCompetency().getValue() + "\n";
-//        }
-//    }
+
+    @Override
+    public String toString() {
+        if(this.getName() == null && this.employer.getValue() == null && this.location.getValue() == null && this.positionType.getValue() == null && this.coreCompetency.getValue() == null) {
+            return "OOPS! This job does not seem to exist.";
+        }
+
+        if (this.getName() == null) {
+            this.setName("Data not available");
+        }
+        if (this.employer.getValue() == null) {
+            this.employer.setValue("Data not available");
+        }
+        if (this.location.getValue() == null) {
+            this.location.setValue("Data not available");
+        }
+        if (this.positionType.getValue() == null) {
+            this.positionType.setValue("Data not available");
+        }
+        if (this.coreCompetency.getValue() == null) {
+            this.coreCompetency.setValue("Data not available");
+        }
+
+        return "\n"
+                + "ID: " + this.getId() + "\n"
+                + "Name: " + this.getName() + "\n"
+                + "Employer: " + this.getEmployer().getValue() + "\n"
+                + "Location: " + this.getLocation().getValue() + "\n"
+                + "Position Type: " + this.getPositionType().getValue() + "\n"
+                + "Core Competency: " + this.getCoreCompetency().getValue() + "\n";
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
