@@ -57,23 +57,23 @@ public class Job {
 
     @Override
     public String toString() {
-        if(this.getName() == null && this.employer.getValue() == null && this.location.getValue() == null && this.positionType.getValue() == null && this.coreCompetency.getValue() == null) {
+        if(this.getName() == "" && this.employer.getValue() == "" && this.location.getValue() == "" && this.positionType.getValue() == "" && this.coreCompetency.getValue() == "") {
             return "OOPS! This job does not seem to exist.";
         }
 
-        if (this.getName() == null) {
+        if (this.getName() == "") {
             this.setName("Data not available");
         }
-        if (this.employer.getValue() == null) {
+        if (this.employer.getValue() == "") {
             this.employer.setValue("Data not available");
         }
-        if (this.location.getValue() == null) {
+        if (this.location.getValue() == "") {
             this.location.setValue("Data not available");
         }
-        if (this.positionType.getValue() == null) {
+        if (this.positionType.getValue() == "") {
             this.positionType.setValue("Data not available");
         }
-        if (this.coreCompetency.getValue() == null) {
+        if (this.coreCompetency.getValue() == "") {
             this.coreCompetency.setValue("Data not available");
         }
 

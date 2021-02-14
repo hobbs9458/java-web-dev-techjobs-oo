@@ -61,7 +61,7 @@ public class JobTest {
 
   @Test
   public void testNoName() {
-    jobObjNoName = new Job(null, new Employer("ACME"), new Location("Desert"),
+    jobObjNoName = new Job("", new Employer("ACME"), new Location("Desert"),
         new PositionType("Quality control"), new CoreCompetency("Persistence"));
     assertEquals("\n" + "ID: " + jobObjNoName.getId() + "\n"
         + "Name: Data not available\n"
@@ -73,7 +73,7 @@ public class JobTest {
 
   @Test
   public void testNoEmployer() {
-    jobObjNoEmployer = new Job("Product tester", new Employer(null), new Location("Desert"),
+    jobObjNoEmployer = new Job("Product tester", new Employer(""), new Location("Desert"),
         new PositionType("Quality control"), new CoreCompetency("Persistence"));
     assertEquals("\n" + "ID: " + jobObjNoEmployer.getId() + "\n"
         + "Name: Product tester\n"
@@ -86,7 +86,7 @@ public class JobTest {
   @Test
   public void testNoPosition() {
     jobObjNoPosition = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
-        new PositionType(null), new CoreCompetency("Persistence"));
+        new PositionType(""), new CoreCompetency("Persistence"));
     assertEquals("\n" + "ID: " + jobObjNoPosition.getId() + "\n"
         + "Name: Product tester\n"
         + "Employer: ACME\n"
@@ -97,8 +97,8 @@ public class JobTest {
 
   @Test
   public void testNullJob() {
-    jobNull = new Job(null, new Employer(null), new Location(null),
-        new PositionType(null), new CoreCompetency(null));
+    jobNull = new Job("", new Employer(""), new Location(""),
+        new PositionType(""), new CoreCompetency(""));
     assertEquals("OOPS! This job does not seem to exist.", jobNull.toString());
   }
 }
